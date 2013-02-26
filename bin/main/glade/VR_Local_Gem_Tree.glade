@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkMenu" id="popGem">
+    <property name="visible">True</property>
+    <property name="ubuntu_local">True</property>
+    <child>
+      <object class="GtkMenuItem" id="popOpenRubygemsPage">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open gem's project page on rubygems.org using your web browser.</property>
+        <property name="label" translatable="yes">Open rubygems.org Page</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popOpenRubygemsPage_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popUninstall">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Uninstall this gem from your local machine.
+</property>
+        <property name="label" translatable="yes">Uninstall Gem</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popUninstall_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popOpenHomepage">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open this gem's homepage in your web browser.</property>
+        <property name="label" translatable="yes">Open Homepage</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popOpenHomepage_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popViewSpec">
+        <property name="visible">True</property>
+        <property name="label" translatable="yes">View Specification</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popViewSpec_clicked"/>
+      </object>
+    </child>
+  </object>
+</interface>

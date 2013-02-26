@@ -1,0 +1,20 @@
+--- !ruby/object:VR_ENV
+browser: firefox
+width: 800
+height: 600
+panel_pos: 360
+backup_path: c:\Users\nwt
+tab_spaces: 2
+run_command_line: ruby testscribeIDE.rb
+open_files:
+- F:/projects/gems/TestScribeIDE/Untitled
+open_folders:
+- F:/projects/gems/TestScribeIDE
+- F:/projects/gems/TestScribeIDE/lib
+current_file: F:/projects/gems/TestScribeIDE/Untitled
+glade_path: c:\Program Files (x86)\Glade3\bin\glade-3.exe
+font_name: Monospace 10
+rdoc_command_line: rdoc -x README
+builder: !ruby/object:Gtk::Builder {}
+glade_box: !ruby/object:VR::SimpleComboBoxEntry {}
+browser_box: !ruby/object:VR::SimpleComboBoxEntry {}

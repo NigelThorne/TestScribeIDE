@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkMenu" id="popGem">
+    <property name="visible">True</property>
+    <child>
+      <object class="GtkMenuItem" id="popOpenRubygemsPage">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open this gem's page on rubygems.org</property>
+        <property name="label" translatable="yes">Open rubygems Project Page</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popOpenRubygemsPage_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popOpenHomepage">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Open gem's homepage in the default web browser.</property>
+        <property name="label" translatable="yes">Open Homepage</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popOpenHomepage_clicked"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popYank">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">Removes the gem from rubygems.org so nobody can download it.</property>
+        <property name="label" translatable="yes">Yank Gem From rubygems.org</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="popYank_clicked"/>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="window1">
+    <property name="window_position">center-on-parent</property>
+    <signal name="destroy" handler="destroy_window"/>
+    <child>
+      <object class="GtkHBox" id="hbox1">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkVBox" id="vbox1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;big&gt;&lt;big&gt;Contacting Rubygems.org...&lt;/big&gt;&lt;/big&gt;
+Please wait while the names of your gems are downloaded.  Yanking old versions of your gems, makes this process faster.</property>
+                <property name="use_markup">True</property>
+                <property name="wrap">True</property>
+              </object>
+              <packing>
+                <property name="padding">15</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkProgressBar" id="progressbar1">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="padding">20</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="padding">15</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
